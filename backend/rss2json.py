@@ -13,7 +13,6 @@ class CORSRequestHandler(SimpleHTTPRequestHandler):
             rss = feedparser.parse(query["url"][0])
             items = []
             for item in rss.entries[:10]:
-                print(item)
                 if "published" in item:
                     date = item.published
                 elif "updated" in item:
