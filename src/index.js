@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     feedSection.classList.add("feeds");
 
     settings.rss.forEach(function (feedUrl) {
-        feedSection.appendChild(displayFeed(feedUrl, settings.feedItems, settings.rss2jsonKey));
+        feedSection.appendChild(displayFeed(feedUrl, settings.feedBackend));
     });
 
     settings.links.forEach(function (link) {

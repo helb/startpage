@@ -1,7 +1,6 @@
 {
   "title": "🏠~",
-  "feedItems": 10,
-  "rss2jsonKey": "fty9sseuhjx5silqnlk79bwf5v7e5rfxewejlnte",
+  "feedBackend": "https://rss2json.helb.cz/",
   "rss": [
     "http://www.ceskatelevize.cz/ct24/rss/",
     "https://www.krimi-plzen.cz/rss/",

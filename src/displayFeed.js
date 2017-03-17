@@ -1,20 +1,20 @@
 import dateFormat from "./dateFormat.js";
 import decodeEntities from "./decodeEntities.js";
+import feedparser from "feedparser-promised";
 
 /**
  * Fetches RSS feed and parses it to HTML link with title and timestamp.
- * @param {String} url - RSS feed URL
- * @param {Integer} items - Number of feed items to display
- * @param {String} apiKey - API key for rss2json.com service
+ * @param {String} feedUrl - RSS feed URL
+ * @param {String} backendUrl - rss2json backend URL
  * @return {Element}
  */
-export default function displayFeed(url, items = 10, apiKey) {
+export default function displayFeed(feedUrl, backendUrl) {
     const div = document.createElement("div");
-    fetch(`https://rss2json.com/api.json?rss_url=${encodeURI(url)}&count=${items}&api_key=${apiKey}`)
+    fetch(`${backendUrl}?url=${encodeURI(feedUrl)}`)
     .then((response) => {
         response.json().then((data) => {
             const heading = document.createElement("h2");
-            heading.innerHTML = data.feed.title;
+            heading.innerHTML = data.title;
             div.appendChild(heading);
             data.items.forEach(function (item) {
                 const link = document.createElement("a");
@@ -38,5 +38,6 @@ export default function displayFeed(url, items = 10, apiKey) {
 
         });
     });
+
     return div;
 };
