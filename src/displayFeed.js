@@ -21,11 +21,11 @@ export default function displayFeed(feedUrl, backendUrl) {
                 link.title = item.title;
                 if (item.pubDate) {
                     const timestamp = dateFormat(new Date(item.pubDate));
-                    link.innerHTML = `<span class=title>
-                                          ${item.title}
-                                      </span>
-                                      <span class=timestamp>
+                    link.innerHTML = `<span class=timestamp>
                                           ${timestamp}
+                                      </span>
+                                      <span class=title>
+                                          ${item.title}
                                       </span>`;
                 } else {
                     link.innerHTML = `<span class=title>
