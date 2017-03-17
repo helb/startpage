@@ -59,6 +59,13 @@ module.exports = {
                                 minimize: true
                             }
                         }, {
+                            loader: "postcss-loader",
+                            options: {
+                                plugins() {
+                                    return [require("autoprefixer")];
+                                }
+                            }
+                        }, {
                             loader: "sass-loader",
                             options: {
                                 sourceMap: true
