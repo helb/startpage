@@ -13,10 +13,17 @@ class CORSRequestHandler(SimpleHTTPRequestHandler):
             rss = feedparser.parse(query["url"][0])
             items = []
             for item in rss.entries[:10]:
+                print(item)
+                if "published" in item:
+                    date = item.published
+                elif "updated" in item:
+                    date = item.updated
+                else:
+                    date = None
                 items.append({
                     "link": item.link,
                     "title": item.title,
-                    "pubDate": item.published
+                    "pubDate": date
                 })
             json_response = json.dumps({
                 "title": rss.feed.title,
