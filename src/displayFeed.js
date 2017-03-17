@@ -1,6 +1,5 @@
 import dateFormat from "./dateFormat.js";
 import decodeEntities from "./decodeEntities.js";
-import feedparser from "feedparser-promised";
 
 /**
  * Fetches RSS feed and parses it to HTML link with title and timestamp.
