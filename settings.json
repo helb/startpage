@@ -1,0 +1,40 @@
+{
+  "title": "🏠~",
+  "feedItems": 10,
+  "rss2jsonKey": "fty9sseuhjx5silqnlk79bwf5v7e5rfxewejlnte",
+  "rss": [
+    "http://www.ceskatelevize.cz/ct24/rss/",
+    "https://www.krimi-plzen.cz/rss/",
+    "https://www.novinky.cz/rss/",
+    "http://plzensky.denik.cz/rss/zpravy_region.html",
+    "http://www.kralovice.cz/rss",
+    "https://www.aktualne.cz/rss/"
+  ],
+  "links": [
+    {
+      "title": "Seznam",
+      "url": "https://www.seznam.cz/",
+      "icon": "https://www.seznam.cz/media/img/seznam-icons/favicon-192x192.png"
+    },
+    {
+      "title": "Mapy",
+      "url": "https://www.mapy.cz/",
+      "icon": "https://mapy.cz/img/favicon/apple-touch-icon-180x180.png"
+    },
+    {
+      "title": "Google",
+      "url": "https://www.google.cz/",
+      "icon": "https://maxcdn.icons8.com/Share/icon/Logos//google_logo1600.png"
+    },
+    {
+      "title": "YouTube",
+      "url": "https://www.youtube.com/",
+      "icon": "https://www.youtube.com/yts/img/favicon_144-vflWmzoXw.png"
+    },
+    {
+      "title": "Wikipedia",
+      "url": "https://cs.wikipedia.org/",
+      "icon": "https://cs.wikipedia.org/static/apple-touch/wikipedia.png"
+    }
+  ]
+}

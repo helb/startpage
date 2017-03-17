@@ -1,0 +1,35 @@
+.links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    user-select: none;
+
+    a {
+        color: desaturate(lighten($color, 50%), 100%);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        margin: 0 0.5em 1em;
+        text-align: center;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+            img {
+                transform: scale(1.025);
+            }
+        }
+
+        img {
+            background-color: desaturate(lighten($color, 50%), 100%);
+            border: 0.25em solid desaturate(lighten($color, 50%), 100%);
+            border-radius: 50%;
+            box-shadow: 0 0.5em 0.5em $shadow;
+            height: 8em;
+            margin-bottom: 1em;
+            transition: transform 0.33s;
+            width: 8em;
+        }
+    }
+}
