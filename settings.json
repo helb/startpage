@@ -1,6 +1,6 @@
 {
   "title": "🏠~",
-  "feedBackend": "https://rss2json.helb.cz/",
+  "feedBackend": "http://localhost:8000/",
   "rss": [
     "http://www.ceskatelevize.cz/ct24/rss/",
     "https://www.krimi-plzen.cz/rss/",
