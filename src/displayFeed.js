@@ -10,13 +10,13 @@ import decodeEntities from "./decodeEntities.js";
  */
 export default function displayFeed(url, items = 10, apiKey) {
     const div = document.createElement("div");
-    fetch(`https://rss2json.com/api.json?rss_url=${encodeURI(url)}&api_key=${apiKey}`)
+    fetch(`https://rss2json.com/api.json?rss_url=${encodeURI(url)}&count=${items}&api_key=${apiKey}`)
     .then((response) => {
         response.json().then((data) => {
             const heading = document.createElement("h2");
             heading.innerHTML = data.feed.title;
             div.appendChild(heading);
-            data.items.slice(0, items).forEach(function (item) {
+            data.items.forEach(function (item) {
                 const link = document.createElement("a");
                 link.href = decodeEntities(item.link);
                 link.title = item.title;
