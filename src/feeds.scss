@@ -9,10 +9,11 @@
         border: 0.1em solid desaturate(lighten($color, 20%), 100%);
         border-radius: 0.5em;
         box-shadow: 0 0.5em 0.5em $shadow;
+        display: flex;
+        flex-direction: column;
         margin: 0 1em 1em 0;
         min-width: 400px;
-        overflow: hidden;
-        width: calc(33% - 1em);
+        width: calc(33vw - 2em);
 
         @media screen and (max-width: 960px) {
             width: 100%;
@@ -29,24 +30,25 @@
             color: desaturate(darken($color, 40%), 20%);
             cursor: pointer;
             display: flex;
-            flex-direction: row-reverse;
+            flex-direction: row;
             padding: 0.5em 1em;
             text-decoration: none;
             transition: transform 0.33s;
             white-space: nowrap;
+            width: 100%;
 
             .title {
+                flex: 1;
+                mask-image: linear-gradient(to right, black 90%, transparent 100%);
                 overflow: hidden;
-                text-overflow: ellipsis;
-                width: 100%;
+                padding-right: 0.5em;
             }
 
             .timestamp {
                 border-right: 0.1em solid desaturate(darken($color, 10%), 30%);
                 color: desaturate(darken($color, 10%), 30%);
                 margin-right: 0.5em;
-                min-width: 5.5em;
-                padding-right: 0.25em;
+                padding-right: 0.5em;
             }
 
             &:not(:last-child) {
@@ -63,6 +65,7 @@
                 border-color: desaturate(darken($color, 40%), 5%);
                 color: desaturate(lighten($color, 50%), 100%);
                 transform: scale(1.025);
+                will-change: transform;
 
                 .timestamp {
                     color: desaturate(lighten($color, 50%), 100%);
